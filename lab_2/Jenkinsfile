@@ -10,31 +10,31 @@ pipeline {
 
         stage('Setup Environment') {
             steps {
-                sh 'pip install -r requirements.txt'
+                sh 'pip install -r lab_1/requirements.txt'
             }
         }
 
         stage('Data Creation') {
             steps {
-                sh './data_creation.py'
+                sh 'lab_1/data_creation.py'
             }
         }
 
         stage('Model Preparation') {
             steps {
-                sh './model_preparation.py'
+                sh 'lab_1/model_preparation.py'
             }
         }
 
         stage('Model Preprocessing') {
             steps {
-                sh './model_preprocessing.py'
+                sh 'lab_1/model_preprocessing.py'
             }
         }
 
         stage('Model Testing') {
             steps {
-                sh './model_testing.py'
+                sh 'lab_1/model_testing.py'
             }
         }
     }
