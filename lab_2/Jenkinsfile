@@ -1,0 +1,41 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/Maksimus1987/ML_OPs_HW_I'
+            }
+        }
+
+        stage('Setup Environment') {
+            steps {
+                sh 'pip install -r requirements.txt'
+            }
+        }
+
+        stage('Data Creation') {
+            steps {
+                sh './data_creation.py'
+            }
+        }
+
+        stage('Model Preparation') {
+            steps {
+                sh './model_preparation.py'
+            }
+        }
+
+        stage('Model Preprocessing') {
+            steps {
+                sh './model_preprocessing.py'
+            }
+        }
+
+        stage('Model Testing') {
+            steps {
+                sh './model_testing.py'
+            }
+        }
+    }
+}
