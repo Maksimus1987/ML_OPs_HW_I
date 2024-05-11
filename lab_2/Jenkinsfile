@@ -16,25 +16,25 @@ pipeline {
 
         stage('Data Creation') {
             steps {
-                sh 'lab_1/data_creation.py'
+                sh 'chmod +x lab_1/data_creation.py'
             }
         }
 
         stage('Model Preparation') {
             steps {
-                sh 'lab_1/model_preparation.py'
+                sh 'chmod +x lab_1/model_preparation.py'
             }
         }
 
         stage('Model Preprocessing') {
             steps {
-                sh 'lab_1/model_preprocessing.py'
+                sh 'chmod +x lab_1/model_preprocessing.py'
             }
         }
 
         stage('Model Testing') {
             steps {
-                sh 'lab_1/model_testing.py'
+                sh 'chmod +x lab_1/model_testing.py'
             }
         }
     }
