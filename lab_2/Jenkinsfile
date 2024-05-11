@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/Maksimus1987/ML_OPs_HW_I/blob/main/lab_2/Jenkinsfile'
+                git branch: 'main', url: 'https://github.com/Maksimus1987/ML_OPs_HW_I'
             }
         }
 
