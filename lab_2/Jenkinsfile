@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/Maksimus1987/ML_OPs_HW_I'
+                git branch: 'main', url: 'https://github.com/Maksimus1987/ML_OPs_HW_I'
             }
         }
 
@@ -39,3 +39,4 @@ pipeline {
         }
     }
 }
+
