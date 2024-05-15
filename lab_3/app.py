@@ -12,11 +12,11 @@ def find_answer(question, context):
 
 if __name__ == '__main__':
     try:
-        st.title('ПОИСК В ТЕКСТЕ ОТВЕТА НА ВОПРОС V2.0')
-        st.text('CONTEXT: текст, в котором будет осуществляться поиск ответа (только на английском).\n'
-                'QUESTION: вопрос, на который будет осуществляться поиск ответа\n\t в тексте из поля CONTEXT (только на английском).')
+        st.title('ПОИСК В ТЕКСТЕ ОТВЕТА НА ВОПРОС')
+        st.text('CONTEXT: текст, в котором будет осуществляться поиск ответа (англ).\n'
+                'QUESTION: вопрос, на который будет осуществляться поиск ответа\n\t в тексте из поля CONTEXT (англ).')
 
-        context = st.text_input('CONTEXT:', value='My name is Ivan.')
+        context = st.text_input('CONTEXT:', value='My name is Maksim.')
         question = st.text_input('QUESTION:', value='What is my name?')
         
         if st.button('ИСКАТЬ ОТВЕТ'):
